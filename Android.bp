@@ -121,6 +121,7 @@ android_library {
         "androidx.fragment_fragment-ktx",
         "androidx.lifecycle_lifecycle-runtime-ktx",
         "custom-sdk_com.github.bumptech.glide_glide",
+        "VendorSupport-preference",
     ],
 
     plugins: [
