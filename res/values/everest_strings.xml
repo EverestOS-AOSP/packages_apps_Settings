@@ -4,4 +4,8 @@
     <!-- About phone screen, Everest OS version -->
     <string name="about_device_name">Device</string>
     <string name="everest_version">EverestOS version</string>
+
+    <!-- Radio Info -->
+    <string name="radio_info_title">Radio info</string>
+
 </resources>
