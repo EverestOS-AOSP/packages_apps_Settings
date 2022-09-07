@@ -317,6 +317,8 @@ public class BatteryInfo {
 
         info.isLongLife = chargingPolicy == BatteryManager.CHARGING_POLICY_ADAPTIVE_LONGLIFE;
         info.statusLabel = Utils.getBatteryStatus(context, batteryBroadcast, isCompactStatus);
+        int bTemp = batteryBroadcast.getIntExtra(BatteryManager.EXTRA_TEMPERATURE, 0);
+        info.batteryTemp = (float) (bTemp / 10);
         info.batteryStatus =
                 batteryBroadcast.getIntExtra(
                         BatteryManager.EXTRA_STATUS, BatteryManager.BATTERY_STATUS_UNKNOWN);
