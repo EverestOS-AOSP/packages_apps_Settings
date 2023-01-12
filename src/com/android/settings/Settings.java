@@ -524,4 +524,9 @@ public class Settings extends SettingsActivity {
 
     // Tweaks Addition
     public static class TweaksActivity extends SettingsActivity {}
+
+    /**
+     * Activity for WirelessDebuggingActivity
+     */
+    public static class WirelessDebuggingActivity extends SettingsActivity { /* empty */ }
 }
