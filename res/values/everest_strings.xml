@@ -79,4 +79,7 @@
     <!-- Base Camp -->
     <string name="tweaks_title">Everest Tweaks</string>
     <string name="tweaks_summary">Height of Customization!!</string>
+
+    <!-- Screenshot shutter -->
+    <string name="screenshot_shutter_sound_title">Screenshot sound</string>
 </resources>
