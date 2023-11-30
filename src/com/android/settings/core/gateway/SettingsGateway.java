@@ -208,6 +208,8 @@ import com.android.settings.wifi.p2p.WifiP2pSettings;
 import com.android.settings.wifi.savedaccesspoints2.SavedAccessPointsWifiSettings2;
 import com.android.settings.wifi.tether.WifiTetherSettings;
 
+import com.android.tweaks.Tweaks;
+
 public class SettingsGateway {
 
     /**
@@ -403,7 +405,8 @@ public class SettingsGateway {
             AccessibilityHearingAidsFragment.class.getName(),
             HearingDevicePairingFragment.class.getName(),
             ZenModesListFragment.class.getName(),
-            ZenModeFragment.class.getName()
+            ZenModeFragment.class.getName(),
+            Tweaks.class.getName(),
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
@@ -450,5 +453,6 @@ public class SettingsGateway {
             UserBackupSettingsActivity.class.getName(),
             Settings.MemtagPageActivity.class.getName(),
             Settings.NavigationModeSettingsActivity.class.getName(),
+            Settings.TweaksActivity.class.getName(),
     };
 }
