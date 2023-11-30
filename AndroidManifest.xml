@@ -5447,6 +5447,19 @@
                 android:value="true" />
         </activity>
 
+        <!-- Tweaks -->
+        <activity android:name=".Settings$TweaksActivity"
+            android:label="@string/tweaks_title"
+            android:icon="@drawable/ic_homepage_everest"
+            android:exported="true"
+            android:parentActivityName="com.android.settings">
+            <intent-filter>
+                <action android:name="com.android.settings.action.SETTINGS" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.android.tweaks.Tweaks" />
+        </activity>
+
         <!-- This is the longest AndroidManifest.xml ever. -->
     </application>
 </manifest>

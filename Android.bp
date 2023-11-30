@@ -55,6 +55,11 @@ android_library {
     srcs: [
         "src/**/*.java",
         "src/**/*.kt",
+        "Tweaks/src/**/*.java",
+        "Tweaks/src/**/*.kt",
+    ],
+    aaptflags: ["--extra-packages com.android.tweaks",
+                "--extra-packages github.com.st235.lib_expandablebottombar",
     ],
     exclude_srcs: [
         "src/com/android/settings/biometrics/fingerprint2/lib/**/*.kt",
@@ -64,6 +69,7 @@ android_library {
         "res",
         "res-export", // for external usage
         "res-product",
+        "Tweaks/res",
     ],
     static_libs: [
         // External dependencies
@@ -121,6 +127,11 @@ android_library {
         "androidx.fragment_fragment-ktx",
         "androidx.lifecycle_lifecycle-runtime-ktx",
         "custom-sdk_com.github.bumptech.glide_glide",
+        "expandable-bottombar",
+        "androidx.navigation_navigation-common-ktx",
+        "androidx.navigation_navigation-fragment-ktx",
+        "androidx.navigation_navigation-runtime-ktx",
+        "androidx.navigation_navigation-ui-ktx",
     ],
 
     plugins: [
@@ -185,4 +196,10 @@ android_library_import {
 filegroup {
     name: "Settings_proguard_flags",
     srcs: ["proguard.flags"],
+}
+
+android_library_import {
+    name: "expandable-bottombar",
+    aars: ["libs/lib-expandablebottombar-release.aar"],
+    sdk_version: "current",
 }
