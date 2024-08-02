@@ -13,33 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.android.settings.deviceinfo.firmwareversion;
 
 import android.content.Context;
-import android.content.Intent;
-import android.os.Build;
-import android.os.SystemClock;
 import android.os.SystemProperties;
-import android.os.UserHandle;
-import android.os.UserManager;
 import android.text.TextUtils;
-import android.util.Log;
-
-import androidx.annotation.VisibleForTesting;
-import androidx.preference.Preference;
-
-import com.android.settings.R;
-import com.android.settings.Utils;
 import com.android.settings.core.BasePreferenceController;
-import com.android.settingslib.RestrictedLockUtils;
-import com.android.settingslib.RestrictedLockUtilsInternal;
 
 public class EverestVersionDetailPreferenceController extends BasePreferenceController {
-
     private static final String TAG = "EverestVersionDialogCtrl";
-
-    private static final String KEY_EVEREST_VERSION_PROP = "ro.everest.version";
+    private static final String[] PROPERTIES = {
+        "ro.everest.version",
+        "ro.everest.buildtype",
+        "ro.everest.edition"
+    };
 
     public EverestVersionDetailPreferenceController(Context context, String key) {
         super(context, key);
@@ -47,22 +34,17 @@ public class EverestVersionDetailPreferenceController extends BasePreferenceCont
 
     @Override
     public int getAvailabilityStatus() {
-        return AVAILABLE;
-    }
-
-    @Override
-    public boolean useDynamicSliceSummary() {
-        return true;
-    }
-
-    @Override
-    public boolean isSliceable() {
-        return true;
+        return TextUtils.isEmpty(SystemProperties.get(PROPERTIES[0]))
+            ? UNSUPPORTED_ON_DEVICE
+            : AVAILABLE;
     }
 
     @Override
     public CharSequence getSummary() {
-        return SystemProperties.get(KEY_EVEREST_VERSION_PROP,
-                mContext.getString(R.string.unknown));
+        String[] values = new String[PROPERTIES.length];
+        for (int i = 0; i < PROPERTIES.length; i++) {
+            values[i] = SystemProperties.get(PROPERTIES[i]);
+        }
+        return String.join(" | ", values).trim();
     }
 }
