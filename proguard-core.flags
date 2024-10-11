@@ -1,0 +1,2 @@
+# Tweaks
+-keep class com.android.tweaks.**

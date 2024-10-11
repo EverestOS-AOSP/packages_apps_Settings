@@ -42,6 +42,9 @@ java_library {
     libs: [
         "app-compat-annotations",
     ],
+    optimize: {
+        proguard_flags_files: ["proguard-core.flags"],
+    },
 }
 
 android_library {
@@ -55,15 +58,21 @@ android_library {
     srcs: [
         "src/**/*.java",
         "src/**/*.kt",
+        "Tweaks/src/**/*.java",
+        "Tweaks/src/**/*.kt",
     ],
     exclude_srcs: [
         "src/com/android/settings/biometrics/fingerprint2/lib/**/*.kt",
     ],
     use_resource_processor: true,
+    
+    aaptflags: ["--extra-packages com.android.tweaks"],
+
     resource_dirs: [
         "res",
         "res-export", // for external usage
         "res-product",
+        "Tweaks/res",
     ],
     static_libs: [
         // External dependencies
@@ -149,6 +158,10 @@ android_library {
     ],
     flags_packages: [
         "android.app.flags-aconfig",
+    ],
+    
+    additional_manifests: [
+        "EverestManifest.xml"
     ],
 }
 
