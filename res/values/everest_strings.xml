@@ -124,4 +124,8 @@
     <string name="display_engine_default">Default</string>
     <string name="display_engine_mode_footer_text">Inspired by Sony\'s Bravia/X-Reality engine, the Display Engine features Vivid mode for enhanced brightness and color saturation, X-Reality mode for improved detail and color accuracy, and Triluminos mode for notorious display color accuracy.</string>
 
+    <!-- Base Camp -->
+    <string name="tweaks_title">Everest Tweaks</string>
+    <string name="tweaks_summary">Height of Customization!!</string>
+
 </resources>

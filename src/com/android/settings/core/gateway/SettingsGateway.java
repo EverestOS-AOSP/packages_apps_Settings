@@ -210,6 +210,9 @@ import com.android.settings.wifi.p2p.WifiP2pSettings;
 import com.android.settings.wifi.savedaccesspoints2.SavedAccessPointsWifiSettings2;
 import com.android.settings.wifi.tether.WifiTetherSettings;
 
+import com.android.tweaks.TweaksFragment;
+import com.android.tweaks.categories.*;
+
 public class SettingsGateway {
 
     /**
@@ -408,6 +411,7 @@ public class SettingsGateway {
             ZenModeFragment.class.getName(),
             WirelessDebuggingFragment.class.getName(),
             RunningServices.class.getName(),
+            TweaksFragment.class.getName(),
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
@@ -456,5 +460,6 @@ public class SettingsGateway {
             Settings.NavigationModeSettingsActivity.class.getName(),
             Settings.WirelessDebuggingActivity.class.getName(),
             Settings.DevRunningServicesActivity.class.getName(),
+            Settings.TweaksActivity.class.getName(),
     };
 }
