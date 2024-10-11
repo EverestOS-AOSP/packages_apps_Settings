@@ -144,4 +144,8 @@
     <string name="compact_heads_up_notifications_enabled_title">Compact heads-up</string>
     <string name="compact_heads_up_notifications_enabled_summary">Display notifications in compact size</string>
 
+    <!-- Tweaks -->
+    <string name="tweaks_title">Tweaks</string>
+    <string name="tweaks_summary">Peak Customizations</string>
+
 </resources>
