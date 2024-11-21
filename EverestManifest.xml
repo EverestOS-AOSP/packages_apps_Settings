@@ -40,5 +40,32 @@
                        android:value="true" />
         </activity>
 
+        <!-- Clockface Settings -->
+        <activity android:name="Settings$TweaksClockFacesActivity"
+                  android:exported="true">
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                       android:value="com.android.tweaks.categories.ClockFaceSettings" />
+        </activity>
+        <!-- ThemeSettings Settings -->
+        <activity android:name="Settings$TweaksThemesActivity"
+                  android:icon="@drawable/ic_tweaks_themes"
+                  android:exported="true">
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                       android:value="com.android.tweaks.categories.ThemeSettings" />
+        </activity>
+        <!-- Fonts Settings -->
+        <activity android:name="Settings$TweaksFontsActivity"
+                  android:icon="@drawable/ic_tweaks_fonts"
+                  android:exported="true">
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                       android:value="com.android.tweaks.categories.FontSettings" />
+        </activity>
+        <!-- LockScreen Settings -->
+        <activity android:name="Settings$TweaksLockscreenActivity"
+                  android:icon="@drawable/ic_tweaks_lock"
+                  android:exported="true">
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                       android:value="com.android.tweaks.categories.LockScreenSettings" />
+        </activity>
     </application>
 </manifest>

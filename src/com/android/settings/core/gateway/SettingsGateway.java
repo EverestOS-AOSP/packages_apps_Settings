@@ -414,6 +414,10 @@ public class SettingsGateway {
             RunningServices.class.getName(),
             VolumeSteps.class.getName(),
             TweaksFragment.class.getName(),
+            ClockFaceSettings.class.getName(),
+            FontSettings.class.getName(),
+            ThemeSettings.class.getName(),
+            LockScreenSettings.class.getName(),
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
@@ -463,5 +467,9 @@ public class SettingsGateway {
             Settings.WirelessDebuggingActivity.class.getName(),
             Settings.DevRunningServicesActivity.class.getName(),
             Settings.TweaksActivity.class.getName(),
+            Settings.TweaksClockFacesActivity.class.getName(),
+            Settings.TweaksFontsActivity.class.getName(),
+            Settings.TweaksThemesActivity.class.getName(),
+            Settings.TweaksLockscreenActivity.class.getName(),
     };
 }
