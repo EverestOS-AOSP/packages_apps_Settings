@@ -40,5 +40,117 @@
                        android:value="true" />
         </activity>
 
+        <!-- About Settings -->
+        <activity android:name="Settings$TweaksAboutActivity"
+                  android:icon="@drawable/ic_tweaks_about"
+                  android:exported="true">
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                       android:value="com.android.tweaks.categories.AboutSettings" />
+        </activity>
+        <!-- Profile Settings -->
+        <activity android:name="Settings$TweaksProfileActivity"
+                  android:exported="true">
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                       android:value="com.android.tweaks.categories.ProfileSettings" />
+        </activity>
+        <!-- Clockface Settings -->
+        <activity android:name="Settings$TweaksClockFacesActivity"
+                  android:exported="true">
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                       android:value="com.android.tweaks.categories.ClockFaceSettings" />
+        </activity>
+        <!-- LockScreen Settings -->
+        <activity android:name="Settings$TweaksLockscreenActivity"
+                  android:icon="@drawable/ic_tweaks_lock"
+                  android:exported="true">
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                       android:value="com.android.tweaks.categories.LockScreenSettings" />
+        </activity>
+        <!-- ThemeSettings Settings -->
+        <activity android:name="Settings$TweaksThemesActivity"
+                  android:icon="@drawable/ic_tweaks_themes"
+                  android:exported="true">
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                       android:value="com.android.tweaks.categories.ThemeSettings" />
+        </activity>
+        <!-- Fonts Settings -->
+        <activity android:name="Settings$TweaksFontsActivity"
+                  android:icon="@drawable/ic_tweaks_fonts"
+                  android:exported="true">
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                       android:value="com.android.tweaks.categories.FontSettings" />
+        </activity>
+        <!-- Battery Settings -->
+        <activity android:name="Settings$TweaksBatteryActivity"
+                  android:label="@string/battery_title"
+                  android:icon="@drawable/ic_tweaks_battery"
+                  android:exported="true">
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                       android:value="com.android.tweaks.categories.BatterySettings" />
+        </activity>
+        <!-- StatusBarSettings Settings -->
+        <activity android:name="Settings$TweaksStatusBarActivity"
+                  android:label="@string/status_bar_title"
+                  android:icon="@drawable/ic_tweaks_statusbar"
+                  android:exported="true">
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                       android:value="com.android.tweaks.categories.StatusBarSettings" />
+        </activity>
+        <!-- QuickSettings Settings -->
+        <activity android:name="Settings$TweaksQuickSettingsActivity"
+                  android:label="@string/qs_panel_title"
+                  android:icon="@drawable/ic_tweaks_qs"
+                  android:exported="true">
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                       android:value="com.android.tweaks.categories.QuickSettings" />
+        </activity>
+        <!-- Power Settings -->
+        <activity android:name="Settings$TweaksPowerMenuActivity"
+                  android:label="@string/power_title"
+                  android:icon="@drawable/ic_tweaks_power"
+                  android:exported="true">
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                       android:value="com.android.tweaks.categories.PowerSettings" />
+        </activity>
+        <!-- Volume Settings -->
+        <activity android:name="Settings$TweaksVolumeActivity"
+                  android:label="@string/volume_title"
+                  android:icon="@drawable/ic_tweaks_volume"
+                  android:exported="true">
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                       android:value="com.android.tweaks.categories.VolumeSettings" />
+        </activity>
+        <!-- System Settings -->
+        <activity android:name="Settings$TweaksSystemActivity"
+                  android:label="@string/system_dashboard_title"
+                  android:icon="@drawable/ic_tweaks_system"
+                  android:exported="true">
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                       android:value="com.android.tweaks.categories.SystemSettings" />
+        </activity>
+        <!-- Misc Settings -->
+        <activity android:name="Settings$TweaksMiscActivity"
+                  android:label="@string/misc_dashboard_title"
+                  android:icon="@drawable/ic_tweaks_misc"
+                  android:exported="true">
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                       android:value="com.android.tweaks.categories.MiscSettings" />
+        </activity>
+        <!-- Gesture Settings -->
+        <activity android:name="Settings$TweaksGesturesActivity"
+                  android:label="@string/gestures_dashboard_title"
+                  android:icon="@drawable/ic_tweaks_gestures"
+                  android:exported="true">
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                       android:value="com.android.tweaks.categories.GestureSettings" />
+        </activity>
+        <!-- Notification Settings -->
+        <activity android:name="Settings$TweaksNotificationsActivity"
+                  android:label="@string/notification_title"
+                  android:icon="@drawable/ic_tweaks_notification"
+                  android:exported="true">
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                       android:value="com.android.tweaks.categories.NotificationSettings" />
+        </activity>
     </application>
 </manifest>

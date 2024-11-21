@@ -534,4 +534,19 @@ public class Settings extends SettingsActivity {
 
     /** Tweaks Activities **/
     public static class TweaksActivity extends SettingsActivity {}
+    public static class TweaksAboutActivity extends SettingsActivity {}
+    public static class TweaksProfileActivity extends SettingsActivity {}
+    public static class TweaksClockFacesActivity extends SettingsActivity {}
+    public static class TweaksLockscreenActivity extends SettingsActivity {}
+    public static class TweaksThemesActivity extends SettingsActivity {}
+    public static class TweaksFontsActivity extends SettingsActivity {}
+    public static class TweaksBatteryActivity extends SettingsActivity {}
+    public static class TweaksStatusBarActivity extends SettingsActivity {}
+    public static class TweaksQuickSettingsActivity extends SettingsActivity {}
+    public static class TweaksSystemActivity extends SettingsActivity {}
+    public static class TweaksPowerMenuActivity extends SettingsActivity {}
+    public static class TweaksVolumeActivity extends SettingsActivity {}
+    public static class TweaksMiscActivity extends SettingsActivity {}
+    public static class TweaksGesturesActivity extends SettingsActivity {}
+    public static class TweaksNotificationsActivity extends SettingsActivity {}
 }
