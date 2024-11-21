@@ -534,4 +534,7 @@ public class Settings extends SettingsActivity {
 
     /** Tweaks Activities **/
     public static class TweaksActivity extends SettingsActivity {}
+    public static class TweaksClockFacesActivity extends SettingsActivity {}
+    public static class TweaksFontsActivity extends SettingsActivity {}
+    public static class TweaksThemesActivity extends SettingsActivity {}
 }
