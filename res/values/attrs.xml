@@ -15,6 +15,10 @@
 -->
 
 <resources>
+    <declare-styleable name="WallpaperView">
+        <attr name="blurred" format="boolean" />
+    </declare-styleable>
+
     <declare-styleable name="PercentageBarChart">
         <!-- Background color -->
         <attr name="emptyColor" format="color" />

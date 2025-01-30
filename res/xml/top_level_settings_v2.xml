@@ -20,11 +20,26 @@
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:key="top_level_settings">
 
-    <PreferenceCategory
-        android:order="-140"
+    <!-- This category should hold uncategorized preferences such as OEM parts, unknown dashboard injects etc -->
+    <com.android.settings.preferences.AutoHidePreferenceCategory
+        android:order="-1001"
+        android:key="top_level_extras_category"
+        android:layout="@layout/settingslib_preference_category_no_title">
+    </com.android.settings.preferences.AutoHidePreferenceCategory>
+
+    <com.android.settings.preferences.AutoHidePreferenceCategory
+        android:order="-152"
         android:key="top_level_account_category"
         android:layout="@layout/settingslib_preference_category_no_title">
-    </PreferenceCategory>
+        
+        <com.android.settings.widget.AvatarHomePagePreference
+            android:icon="@drawable/ic_heart"
+            android:key="top_level_usercard"
+            android:order="-152"
+            android:title="@string/user_card_title"
+            android:summary="@string/user_card_summary"/>
+
+    </com.android.settings.preferences.AutoHidePreferenceCategory>
 
     <PreferenceCategory
         android:order="-130"
@@ -180,6 +195,25 @@
         android:order="-100"
         android:key="top_level_security_privacy_category"
         android:layout="@layout/settingslib_preference_category_no_title">
+        
+        <com.android.settings.widget.HomepagePreference
+            android:icon="@drawable/ic_homepage_google"
+            android:key="top_level_services"
+            android:order="-52"
+            android:title="@string/gms_enabled_title"
+            android:summary="@string/summary_placeholder"
+            settings:highlightableMenuKey="top_level_google"
+            settings:controller="com.android.settings.home.GooglePreferenceController"/>
+
+        <com.android.settings.widget.HomepagePreference
+            android:icon="@drawable/ic_homepage_wellbeing"
+            android:key="top_level_wb"
+            android:order="-51"
+            android:title="@string/wellbeing_title"
+            android:summary="@string/summary_placeholder"
+            settings:highlightableMenuKey="top_level_wellbeing"
+            settings:controller="com.android.settings.home.WellbeingPreferenceController"/>
+
         <com.android.settings.widget.HomepagePreference
             android:icon="@drawable/ic_settings_safety_center_filled"
             android:key="top_level_safety_center"

@@ -52,6 +52,7 @@ import com.android.settings.overlay.FeatureFactory;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.support.SupportPreferenceController;
 import com.android.settings.widget.HomepagePreference;
+import com.android.settings.widget.HomepagePreferenceLayoutHelper;
 import com.android.settings.widget.HomepagePreferenceLayoutHelper.HomepagePreferenceLayout;
 import com.android.settingslib.core.instrumentation.Instrumentable;
 import com.android.settingslib.drawer.Tile;
@@ -213,6 +214,16 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         super.onCreatePreferences(savedInstanceState, rootKey);
         if (Flags.homepageRevamp()) {
+            iteratePreferences(preference -> {
+                if (Flags.homepageRevamp()) {
+                    String prefKey = preference.getKey();
+                    if (prefKey.equals("top_level_wellbeing")
+                        || prefKey.equals("top_level_google")) {
+                        preference.setVisible(false);
+                    }
+                    return;
+                }
+            });
             return;
         }
         int tintColor = Utils.getHomepageIconColor(getContext());
@@ -285,10 +296,11 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
             @Override
             public void doForEach(Preference preference) {
                 if (preference instanceof HomepagePreferenceLayout) {
-                    ((HomepagePreferenceLayout) preference).getHelper()
-                            .setIconPaddingStart(mIconPaddingStart);
-                    ((HomepagePreferenceLayout) preference).getHelper()
-                            .setTextPaddingStart(mTextPaddingStart);
+                    HomepagePreferenceLayoutHelper helper = ((HomepagePreferenceLayout) preference).getHelper();
+                    if (helper != null) {
+                        helper.setIconPaddingStart(mIconPaddingStart);
+                        helper.setTextPaddingStart(mTextPaddingStart);
+                    }
                 }
             }
         });
