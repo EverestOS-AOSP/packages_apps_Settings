@@ -60,6 +60,8 @@ android_library {
         "src/**/*.kt",
         "Tweaks/src/**/*.java",
         "Tweaks/src/**/*.kt",
+        "support/src/**/*.java",
+        "support/src/**/*.kt",
     ],
     exclude_srcs: [
         "src/com/android/settings/biometrics/fingerprint2/lib/**/*.kt",
@@ -73,6 +75,7 @@ android_library {
         "res-export", // for external usage
         "res-product",
         "Tweaks/res",
+        "support/res",
     ],
     static_libs: [
         // External dependencies
