@@ -32,7 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/custom_avatar_length"
             android:paddingStart="@dimen/search_bar_padding_start"
-            android:background="@drawable/search_bar_selected_background"
+            android:background="@drawable/search_bar_selected_background_v2"
             android:touchscreenBlocksFocus="false"
             android:nextFocusForward="@+id/homepage_container"
             android:contentInsetStartWithNavigation="@dimen/search_bar_content_inset">
