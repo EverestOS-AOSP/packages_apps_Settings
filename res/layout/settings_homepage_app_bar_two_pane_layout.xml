@@ -31,7 +31,8 @@
         android:layout_marginTop="@dimen/homepage_title_margin_top"
         android:layout_marginBottom="@dimen/search_bar_margin"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:maxLines="2" />
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -543,4 +543,8 @@
     <dimen name="zen_mode_circular_icon_margin_between">4dp</dimen>
     <dimen name="zen_mode_circular_icon_margin_vertical">8dp</dimen>
     <dimen name="zen_mode_circular_icon_text_size">18dp</dimen>
+
+    <!-- Header Messages -->
+    <dimen name="header_text_size_contextual">22sp</dimen>
+    <dimen name="header_text_size_default">32sp</dimen>
 </resources>
